@@ -1,28 +1,42 @@
 ---
 aliases:
 - about-us
-- about-hugo
+- about-miki
 - contact
-author: Hugo Authors
-date: "2019-02-28"
-description: Hugo, the world's fastest framework for building websites
+author: Miki
+date: "2021-04-30"
+description: Who is Miki?
 title: About
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hellooo.
 
-Hugo makes use of a variety of open source projects including:
+Who's she.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+She is cool.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+In her own way.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+She loves her life.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+She enjoys being alone.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+And with friends sometimes.
+
+She lives with cats for 17 years.
+
+She likes dancing, painting and hiking.
+
+She paints her dream in her mind every night.
+
+She loves data science because it makes the world better.
+
+She believes that data science can help with reducing crimes.
+
+So she is learning things every day to become a data scientist.
+
+
+
+
+
+
