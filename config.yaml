@@ -10,7 +10,7 @@ pygmentsCodeFencesGuessSyntax: yes
 enableEmoji: yes
 params:
   author: Miki Wang
-  avatarURL: images/avatar.jpg
+  avatarURL: images/dance.GIF
   colorScheme: auto
   commit: https://github.com/luizdepra/hugo-coder/tree/
   csp:
@@ -42,7 +42,7 @@ params:
   dateFormat: January 2, 2006
   description: Miki Wang's personal website
   enableTwemoji: no
-  footerContent: Hello.
+  footerContent: Love this world.
   hideColorSchemeToggle: no
   hideCopyright: no
   hideCredits: no
