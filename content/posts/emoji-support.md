@@ -1,45 +1,46 @@
 ---
-author: Hugo Authors
-date: "2019-03-05"
-description: Guide to emoji usage in Hugo
-tags:
-- emoji
-title: Emoji Support
+author: Miki
+date: "2021-04-30"
+title: Scraped Google Custom Search API
 ---
 
-Emoji can be enabled in a Hugo project in a number of ways.
-<!--more-->
-The [`emojify`](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates/#inline-shortcodes).
+:relaxed:
 
-To enable emoji globally, set `enableEmoji` to `true` in your site's [configuration](https://gohugo.io/getting-started/configuration/) and then you can type emoji shorthand codes directly in content files; e.g.
+```{python}
+from googleapiclient.discovery import build
 
-<p><span class="nowrap"><span class="emojify">🙈</span> <code>:see_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙉</span> <code>:hear_no_evil:</code></span>  <span class="nowrap"><span class="emojify">🙊</span> <code>:speak_no_evil:</code></span></p>
-<br>
+my_api_key = " " #The API_KEY you acquired
+my_cse_id = " " #The search-engine-ID you created
 
-The [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/) is a useful reference for emoji shorthand codes.
+def google_search(search_term, api_key, cse_id, date):
+    service = build("customsearch", "v1", developerKey=api_key )
+    res = service.cse().list(q=search_term, cx=cse_id, sort=date).execute()
+    if 'items' in res:
+      return res['items']
+    else:
+      return 'N' # return N as missing value
+```
 
-***
-
-**N.B.** The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.
-
-{{< highlight html >}}
-.emoji {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-}
-{{< /highlight >}}
-
-{{< css.inline >}}
-<style>
-.emojify {
-	font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-	font-size: 2rem;
-	vertical-align: middle;
-}
-@media screen and (max-width:650px) {
-  .nowrap {
-    display: block;
-    margin: 25px 0;
-  }
-}
-</style>
-{{< /css.inline >}}
+Then searched key words...
+```{python}
+save_result=[]
+list_of_bigtechs= ['facebook','google','amazon','twitter','apple','microsoft','big tech','giant tech']
+list_of_keywords=['politics','power','election','influence']
+# list_of_keywords=['pandemic','covid19']
+my_date="date:r:20210101:20210430"
+for i in list_of_bigtechs:
+  for j in list_of_keywords:
+    query=i+j
+    results = google_search(query, my_api_key, my_cse_id,my_date)
+    for result in results:
+      print(result)
+      save_result.append(result)
+```
+Added Year column...
+```{python}
+import pandas as pd
+savedresult = [x for x in save_result if x != 'N']
+my_file=pd.DataFrame(savedresult,columns=['kind',	'title',	'htmlTitle',	'link',	'displayLink',	'snippet',	'htmlSnippet',	'formattedUrl',	'htmlFormattedUrl',	'pagemap',	'cacheId'])
+my_file=my_file[['title','displayLink','snippet']]
+my_file['Year'] = my_date[-8:-4]
+```
