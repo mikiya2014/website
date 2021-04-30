@@ -10,7 +10,6 @@ pygmentsCodeFencesGuessSyntax: yes
 enableEmoji: yes
 params:
   author: Miki Wang
-  avatarurl: images/avatar1.jpg
   colorScheme: auto
   commit: https://github.com/luizdepra/hugo-coder/tree/
   csp:
