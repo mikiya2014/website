@@ -10,7 +10,7 @@ pygmentsCodeFencesGuessSyntax: yes
 enableEmoji: yes
 params:
   author: Miki Wang
-  avatarURL: images/dance.GIF
+  images: images/dance.GIF
   colorScheme: auto
   commit: https://github.com/luizdepra/hugo-coder/tree/
   csp:
