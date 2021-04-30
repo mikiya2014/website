@@ -29,7 +29,7 @@ She likes dancing, painting and hiking.
 
 She paints her dream in her mind every night.
 
-She loves data science because it makes the world better.
+She loves data science since it makes the world better.
 
 She believes that data science can help with reducing crimes.
 
