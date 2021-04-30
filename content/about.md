@@ -33,7 +33,7 @@ She loves data science because it makes the world better.
 
 She believes that data science can help with reducing crimes.
 
-So she is learning things every day to become a data scientist.
+So she is learning new things every day to become a data scientist.
 
 
 
