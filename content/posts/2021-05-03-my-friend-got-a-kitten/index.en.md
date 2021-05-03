@@ -10,6 +10,6 @@ description: ''
 externalLink: ''
 series: []
 ---
-![Look at this cutie!](images/cat1.jpg)
-![](images/cat2.jpg)
-![](images/cat3.jpg)
+![Look at this cutie!](~/website/content/posts/2021-05-03-my-friend-got-a-kitten/images/cat1.jpg)
+![](~/website/content/posts/2021-05-03-my-friend-got-a-kitten/images/cat2.jpg)
+![](~/website/content/posts/2021-05-03-my-friend-got-a-kitten/images/cat3.jpg)
